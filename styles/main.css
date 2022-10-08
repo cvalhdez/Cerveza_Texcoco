@@ -345,6 +345,9 @@ html {
   }
 }
 @media (max-width: 768px) {
+  .noScroll {
+    overflow: hidden;
+  }
   .gridContainer .header .nav {
     margin: 0 25px;
   }
