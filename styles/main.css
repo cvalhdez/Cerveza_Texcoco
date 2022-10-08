@@ -90,21 +90,179 @@ html {
 .gridContainer .main {
   /* MAIN */
   grid-area: main;
-  background-image: linear-gradient(180deg, #080808, #4a3037);
+  background: linear-gradient(180deg, #080808, #4a3037);
+}
+.gridContainer .main #section1 {
+  /* SECCION INDEX */
+}
+.gridContainer .main #section1 .tituloPrincipal, .gridContainer .main #section1 .containerNoticias h3, .gridContainer .main #section1 h2 {
+  width: 40%;
+  margin: auto;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  padding-top: 15px;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #section1 h2 {
+  font-size: 1.8rem;
+  border-bottom: none;
+  padding-top: 5px;
+  font-weight: 300;
+}
+.gridContainer .main #section1 .containerVideo {
+  display: flex;
+  justify-content: center;
+}
+.gridContainer .main #section1 .containerVideo .iframe {
+  width: 1200px;
+  height: 680px;
+}
+.gridContainer .main #section1 .containerNoticias {
+  margin: 20px;
+}
+.gridContainer .main #section1 .containerNoticias h3 {
+  font-size: 1.7rem;
+  padding-top: 25px;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+.gridContainer .main #section1 .containerNoticias p {
+  margin: auto;
+  width: 67%;
+  font-weight: 100;
+  padding-top: 20px;
+  font-size: 1.6rem;
+  line-height: 40px;
+  text-align: justify;
+}
+.gridContainer .main #section2 h3 {
+  margin: auto;
+  width: 40%;
+  font-size: 1.7rem;
+  text-align: center;
+  padding-top: 25px;
+  text-transform: uppercase;
+  font-weight: 200;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #section2 .boxGaleria {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-evenly;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-top: 45px;
+}
+.gridContainer .main #section2 .boxGaleria:hover .boxBloque {
+  transform: rotateY(25deg);
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque:hover {
+  transform: rotateY(0deg) scale(1.2);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque:hover ~ .boxBloque {
+  transform: rotateY(-25deg);
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, gold, #000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxImg:before {
+  opacity: 1;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido h2 {
+  transition: 0.5s;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 200;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido h2 {
+  transform: translateY(0px);
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido p {
+  text-align: center;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
+  transform: translateY(0px);
 }
 .gridContainer .footer {
   /* FOOTER */
   grid-area: footer;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  margin: auto;
   background: #080808;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-top: solid 3px rgb(255, 183, 0);
+  text-align: center;
 }
 .gridContainer .footer .containerFooter {
   display: flex;
   justify-content: space-around;
   width: 90%;
+  margin: auto;
 }
 .gridContainer .footer .containerFooter .containerSocial .btn {
   display: flex;
@@ -121,13 +279,13 @@ html {
   font-size: 2rem;
 }
 .gridContainer .footer .containerFooter .containerSocial .btn .facebook {
-  color: #42d2ff;
+  color: #4267b2;
 }
 .gridContainer .footer .containerFooter .containerSocial .btn .instagram {
-  color: #833AB4;
+  color: #833ab4;
 }
 .gridContainer .footer .containerFooter .containerSocial .btn:hover ion-icon {
-  color: #fff;
+  color: #ffffff;
   transform: scale(1.3);
 }
 .gridContainer .footer .containerFooter .containerSocial .btn:hover::before {
@@ -141,7 +299,7 @@ html {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: linear-gradient(#00c6ff, #0072ff);
+  background: linear-gradient(#00b2ff, #006aff);
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
@@ -151,7 +309,7 @@ html {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: linear-gradient(#833AB4, #F77737, #FFDC80);
+  background: linear-gradient(#833ab4, #f77737, #ffdc80);
   transform: rotate(45deg);
   left: -110%;
   top: 90%;
@@ -193,7 +351,7 @@ html {
   .gridContainer .header .nav .navMenu {
     flex-direction: column;
     align-items: center;
-    background-color: #4a3037;
+    background: #4a3037;
     gap: 0;
     position: fixed;
     left: 100%;
