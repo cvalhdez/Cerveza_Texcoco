@@ -349,11 +349,11 @@ html {
 }
 @media (max-width: 768px) {
   .noScrollBody{
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
   }
   .noScrollHtml{
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .gridContainer {
     .header {
