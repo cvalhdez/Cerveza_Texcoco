@@ -346,11 +346,11 @@ html {
 }
 @media (max-width: 768px) {
   .noScrollBody {
-    overflow: hidden;
-    position: relative;
+    overflow-y: hidden;
+    max-width: 100vh;
   }
   .noScrollHtml {
-    overflow: hidden;
+    overflow-y: hidden;
   }
   .gridContainer .header .nav {
     margin: 0 25px;
