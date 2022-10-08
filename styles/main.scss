@@ -361,9 +361,10 @@ html {
           left: 100%;
           top: 150px;
           width: 100%;
-          height: calc(100% - 320px);
+          height: 100%;
           overflow-y: auto;
           transition: left 0.5s ease-in-out;
+          z-index: 1;
           .navMenuItem {
             margin: 20px 0;
             line-height: 30px;
@@ -374,6 +375,88 @@ html {
         }
         .navMenu_visible {
           left: 0;
+        }
+      }
+    }
+    .main{
+      #section1{
+        .tituloPrincipal{
+          width: 80%;
+          font-size: 1.5rem;
+        }
+        h2{
+          font-size: 1.4rem;
+        }
+        .containerVideo{
+          .iframe{
+            width: 600px;
+            height: 300px;
+          }
+        }
+        .containerNoticias{
+          h3{
+            font-size: 1.2rem;
+          }
+          p{
+            font-size: 1rem;
+            line-height: 25px;
+          }
+        }
+      }
+      #section2{
+        .boxGaleria{
+          .boxBloque{
+            width: 220px;
+            height: 275px;
+            margin-top: 0px;
+          }
+        }
+        h3{
+          width: 80%;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .gridContainer {
+    .main{
+      #section2{
+        .boxGaleria {
+          flex-wrap: wrap;
+          width: 60%;
+          margin: auto;
+          margin-bottom: 30px;     
+          margin-top: 10px;
+          .boxBloque {
+            margin-top: 45px;
+          }     
+          &:hover .boxBloque {
+            transform: rotateX(-25deg);
+          }     
+          .boxBloque {
+            &:hover {
+              ~ .boxBloque {
+                transform: rotateX(25deg);
+              }      
+              transform: rotateX(0deg) scale(1.2);
+            }      
+            .boxContenido {
+              h2 {
+                transform: translateY(200px);
+              }
+            }
+            &:hover .boxContenido h2 {
+              transform: translateY(0px);
+            }
+            .boxContenido p {
+              transform: translateY(200px);
+            }
+            &:hover .boxContenido p {
+              transform: translateY(0px);
+            }
+          }
         }
       }
     }
