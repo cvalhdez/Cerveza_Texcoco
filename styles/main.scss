@@ -1,0 +1,207 @@
+@import "vars";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: map-get($colores, letter);
+}
+html {
+  height: 100%;
+}
+/* GRID AREA */
+.gridContainer {
+  min-height: 100%;
+  display: grid;
+  grid-template:
+    "header" 150px
+    "main" auto
+    "footer" 170px;
+  .header {
+    /* HEADER */
+    grid-area: header;
+    background: map-get($colores, dark);
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 3px map-get($colores, golden);
+    .nav {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 50px;
+      max-width: 1440px;
+      .navMenu {
+        display: flex;
+        gap: 20px;
+        .navMenuItem {
+          list-style: none;
+          text-transform: uppercase;
+          width: max-content;
+          font-size: 1rem;
+          letter-spacing: 3px;
+          font-weight: 100;
+          .navMenuLink {
+            text-decoration: none;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 3px;
+              bottom: -3px;
+              background: map-get($colores, golden);
+              transform: scaleX(0);
+              transition: transform 0.5s ease-in-out;
+              transform-origin: right;
+            }
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+            &:hover {
+              color: map-get($colores, golden);
+              transition: color 0.5s ease-in-out;
+              text-shadow: 1px 1px 5px;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+      .menuToggle {
+        color: map-get($colores, letter);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        display: none;
+        cursor: pointer;
+        .toggle {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .main {
+    /* MAIN */
+    grid-area: main;
+    background-image: linear-gradient(180deg,map-get($colores,dark),map-get($colores,stout));
+  }
+
+  .footer {
+    /* FOOTER */
+    grid-area: footer;
+    background: map-get($colores , dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 3px map-get($colores, golden);
+    .containerFooter{
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      .containerSocial{
+        .btn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          margin: 10px;
+          border-radius: 30%;
+          overflow: hidden;
+          position: relative;
+          ion-icon{
+            font-size: 2rem;
+          }
+          .facebook{
+            color: #42d2ff;
+          }
+          .instagram{
+            color:#833AB4;
+          }
+          &:hover ion-icon{
+            color: #fff;
+            transform: scale(1.3);
+          }
+          &:hover::before{
+            animation: onHover 0.7s 1;
+            left: -10%;
+            top: -10%; 
+          }
+        }
+        .btnFacebook::before{
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          background: linear-gradient(#00c6ff, #0072ff);
+          transform: rotate(45deg);
+          left: -110%;
+          top: 90%;
+        }
+        .btnInstagram::before{
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          background: linear-gradient(#833AB4,#F77737,#FFDC80);
+          transform: rotate(45deg);
+          left: -110%;
+          top: 90%;
+        }
+      }
+    }
+  }
+}
+@keyframes onHover{
+  0%{
+    left: -110%;
+    top: 90%;
+  }
+  50%{
+    left: 10%;
+    top: -30%;
+  }
+  100%{
+    left: -10%;
+    top: -10%;
+  }
+}
+@media (max-width: 768px) {
+  .gridContainer {
+    .header {
+      .nav {
+        margin: 0 25px;
+        .navMenu {
+          flex-direction: column;
+          align-items: center;
+          background-color: map-get($colores, stout);
+          gap: 0;
+          position: fixed;
+          left: 100%;
+          top: 150px;
+          width: 100%;
+          height: calc(100% - 320px);
+          overflow-y: auto;
+          transition: left 0.5s ease-in-out;
+          .navMenuItem {
+            margin: 20px 0;
+            line-height: 30px;
+          }
+        }
+        .menuToggle {
+          display: block;
+        }
+        .navMenu_visible {
+          left: 0;
+        }
+      }
+    }
+  }
+}
