@@ -369,7 +369,7 @@ html {
           top: 150px;
           width: 100%;
           height: calc(100% - 150px);
-          overflow-y: auto;
+          overflow-y: hidden;
           transition: left 0.5s ease-in-out;
           z-index: 1;
           .navMenuItem {
