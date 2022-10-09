@@ -73,6 +73,11 @@ html {
   text-shadow: 1px 1px 5px;
   font-weight: 200;
 }
+.gridContainer .header .nav .navMenu .navMenuItem .active {
+  color: rgb(255, 183, 0);
+  text-shadow: 1px 1px 5px;
+  font-weight: 200;
+}
 .gridContainer .header .nav .menuToggle {
   color: #ffffff;
   background: none;
@@ -102,12 +107,12 @@ html {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-top: 15px;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
 .gridContainer .main #section1 h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   border-bottom: none;
   padding-top: 5px;
   font-weight: 300;
@@ -124,7 +129,7 @@ html {
   margin: 20px;
 }
 .gridContainer .main #section1 .containerNoticias h3 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   padding-top: 25px;
   letter-spacing: 2px;
   font-weight: 200;
@@ -141,7 +146,7 @@ html {
 .gridContainer .main #section2 h3 {
   margin: auto;
   width: 40%;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-align: center;
   padding-top: 25px;
   text-transform: uppercase;
@@ -247,6 +252,56 @@ html {
 .gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
   transform: translateY(0px);
 }
+.gridContainer .main #sectionNosotros {
+  /* NOSOTROS */
+}
+.gridContainer .main #sectionNosotros .containerNosotros1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gridContainer .main #sectionNosotros .containerNosotros1 h1 {
+  width: 40%;
+  padding-top: 15px;
+  margin: auto;
+  margin-bottom: 50px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #sectionNosotros .containerNosotros1 p {
+  margin: auto;
+  width: 80%;
+  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 25px;
+  padding-bottom: 25px;
+}
+.gridContainer .main #sectionNosotros .containerNosotros1 h2 {
+  width: 40%;
+  padding-top: 25px;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+  font-weight: 200;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #sectionNosotros .containerImg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.gridContainer .main #sectionNosotros .containerImg img {
+  max-width: 80%;
+  padding: 20px 0;
+}
 .gridContainer .footer {
   /* FOOTER */
   grid-area: footer;
@@ -314,6 +369,10 @@ html {
   left: -110%;
   top: 90%;
 }
+.gridContainer .footer p {
+  padding-top: 10px;
+  font-size: 0.7rem;
+}
 
 @-webkit-keyframes onHover {
   0% {
@@ -347,13 +406,9 @@ html {
 @media (max-width: 768px) {
   .noScrollBody {
     overflow-y: hidden;
-    max-width: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .noScrollHtml {
-    overflow-y: hidden;
   }
   .gridContainer .header .nav {
     margin: 0 25px;
@@ -394,10 +449,10 @@ html {
     height: 300px;
   }
   .gridContainer .main #section1 .containerNoticias h3 {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   .gridContainer .main #section1 .containerNoticias p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 20px;
     width: 90%;
   }
@@ -410,6 +465,20 @@ html {
     width: 80%;
     font-size: 1rem;
   }
+  .gridContainer .main #sectionNosotros {
+    /* NOSOTROS */
+  }
+  .gridContainer .main #sectionNosotros .containerNosotros1 h1 {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .gridContainer .main #sectionNosotros .containerNosotros1 p {
+    font-size: 1rem;
+  }
+  .gridContainer .main #sectionNosotros .containerNosotros1 h2 {
+    width: 90%;
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 576px) {
   .gridContainer .main #section1 .containerVideo .iframe {
@@ -420,7 +489,7 @@ html {
     flex-wrap: wrap;
     width: 60%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     margin-top: 10px;
   }
   .gridContainer .main #section2 .boxGaleria .boxBloque {
@@ -446,5 +515,8 @@ html {
   }
   .gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
     transform: translateY(0px);
+  }
+  .gridContainer .footer p {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=main.css.map */
