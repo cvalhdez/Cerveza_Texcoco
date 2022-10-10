@@ -375,6 +375,60 @@ html {
   width: 90%;
   margin: 25px auto;
 }
+.gridContainer .main #sectionLugares h3 {
+  width: 80%;
+  margin: 25px auto;
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #sectionLugares .containerLogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin: 25px 25px;
+}
+.gridContainer .main #sectionLugares .containerLogos li {
+  flex-basis: 400px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+.gridContainer .main #sectionLugares .containerLogos li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.gridContainer .main #sectionLugares .containerLogos li .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 40, 40, 0.7);
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transfomr 0.2s 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.5rem;
+}
+.gridContainer .main #sectionLugares .containerLogos li:hover .overlay {
+  transform: scale(1);
+}
+.gridContainer .main #sectionLugares .containerLogos::after {
+  content: "";
+  flex-basis: 400px;
+}
 .gridContainer .footer {
   /* FOOTER */
   grid-area: footer;
