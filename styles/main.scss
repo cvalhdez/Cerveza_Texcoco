@@ -306,6 +306,81 @@ html {
         }
       }
     }
+    #sectionProductos{
+      /* PRODUCTOS */
+      margin: auto;
+      h2{
+        width: 60%;
+        padding-top: 15px;
+        margin: auto;
+        margin-bottom: 50px;
+        font-weight: 200;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.3rem;
+        border-bottom: 1px solid map-get($colores, golden);
+      }
+      .containerProductos{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        .containerCard{
+          width: 30%;
+          margin: 0 10px;
+          display: flex;
+          flex-direction: column;
+          h3{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+          h2{
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.4rem;
+            border-bottom: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          .pale{
+            color: map-get($colores,pale);
+            border-bottom: solid 2px map-get($colores, pale);
+          }
+          .stout{
+            color: map-get($colores,stout);
+            border-bottom: solid 2px map-get($colores,stout);
+          }
+          .porter{
+            color: map-get($colores,porter);
+            border-bottom: solid 2px map-get($colores,porter);
+          }
+          .containerInfo{
+            width: 100%;
+            height: 50%;
+            p{
+              text-align: justify;
+              line-height: 25px;
+              font-size: 1rem;
+              margin: 5px 0;
+            }
+            ul{
+              li{
+                list-style: none;
+                font-size: 1.1rem;
+              }
+            }
+          }
+          img{
+            width: 90%;
+            margin: 25px auto;
+          }
+        }
+      }
+    }
   }
 
   .footer {
@@ -358,10 +433,7 @@ html {
           position: absolute;
           width: 120%;
           height: 120%;
-          background: linear-gradient(
-            map-get($colores, fb_lightBlue),
-            map-get($colores, fb_darkBlue)
-          );
+          background: linear-gradient(map-get($colores, fb_lightBlue),map-get($colores, fb_darkBlue));
           transform: rotate(45deg);
           left: -110%;
           top: 90%;
@@ -371,11 +443,7 @@ html {
           position: absolute;
           width: 120%;
           height: 120%;
-          background: linear-gradient(
-            map-get($colores, ig_purple),
-            map-get($colores, ig_orange),
-            map-get($colores, ig_lightYellow)
-          );
+          background: linear-gradient(map-get($colores, ig_purple),map-get($colores, ig_orange),map-get($colores, ig_lightYellow));
           transform: rotate(45deg);
           left: -110%;
           top: 90%;
@@ -482,7 +550,6 @@ html {
         }
       }
       #sectionNosotros{
-        /* NOSOTROS */
         .containerNosotros1{
           h1{
             width: 90%;
@@ -494,6 +561,24 @@ html {
           h2{
             width:90%;
             font-size: 1.4rem;
+          }
+        }
+      }
+      #sectionProductos{
+        h2{
+          width: 90%;
+        }
+        .containerProductos{
+          flex-direction: column;
+          align-items: center;
+          .containerCard{
+            width: 100%;
+            h3{
+              font-size: 1.5rem;
+            }
+            h2{
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -544,6 +629,29 @@ html {
             }
             &:hover .boxContenido p {
               transform: translateY(0px);
+            }
+          }
+        }
+      }
+      #sectionProductos{
+        .containerProductos{
+          .containerCard{
+            h3{
+              font-size: 1.2rem;
+            }
+            h2{
+              font-size: 1.1rem;
+            }
+            .containerInfo{
+              p{
+                font-size: .9rem;
+                margin: 0;
+              }
+              ul{
+                li{
+                  font-size: .9em;
+                }
+              }
             }
           }
         }

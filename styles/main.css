@@ -302,6 +302,79 @@ html {
   max-width: 80%;
   padding: 20px 0;
 }
+.gridContainer .main #sectionProductos {
+  /* PRODUCTOS */
+  margin: auto;
+}
+.gridContainer .main #sectionProductos h2 {
+  width: 60%;
+  padding-top: 15px;
+  margin: auto;
+  margin-bottom: 50px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgb(255, 183, 0);
+}
+.gridContainer .main #sectionProductos .containerProductos {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard {
+  width: 30%;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.4rem;
+  border-bottom: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .pale {
+  color: #e7d84a;
+  border-bottom: solid 2px #e7d84a;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .stout {
+  color: #4a3037;
+  border-bottom: solid 2px #4a3037;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .porter {
+  color: #2f3732;
+  border-bottom: solid 2px #2f3732;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo {
+  width: 100%;
+  height: 50%;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo p {
+  text-align: justify;
+  line-height: 25px;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+.gridContainer .main #sectionProductos .containerProductos .containerCard img {
+  width: 90%;
+  margin: 25px auto;
+}
 .gridContainer .footer {
   /* FOOTER */
   grid-area: footer;
@@ -465,9 +538,6 @@ html {
     width: 80%;
     font-size: 1rem;
   }
-  .gridContainer .main #sectionNosotros {
-    /* NOSOTROS */
-  }
   .gridContainer .main #sectionNosotros .containerNosotros1 h1 {
     width: 90%;
     font-size: 1.5rem;
@@ -477,6 +547,22 @@ html {
   }
   .gridContainer .main #sectionNosotros .containerNosotros1 h2 {
     width: 90%;
+    font-size: 1.4rem;
+  }
+  .gridContainer .main #sectionProductos h2 {
+    width: 90%;
+  }
+  .gridContainer .main #sectionProductos .containerProductos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard {
+    width: 100%;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+    font-size: 1.5rem;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
     font-size: 1.4rem;
   }
 }
@@ -515,6 +601,19 @@ html {
   }
   .gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
     transform: translateY(0px);
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+    font-size: 1.2rem;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
+    font-size: 1.1rem;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
+    font-size: 0.9em;
   }
   .gridContainer .footer p {
     font-size: 0.8rem;
