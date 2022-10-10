@@ -17,7 +17,8 @@ html {
   display: grid;
   grid-template: "header" 150px "main" auto "footer" 170px;
 }
-.gridContainer .header {
+
+.header {
   /* HEADER */
   grid-area: header;
   background: #080808;
@@ -25,7 +26,7 @@ html {
   justify-content: center;
   border-bottom: solid 3px rgb(255, 183, 0);
 }
-.gridContainer .header .nav {
+.header .nav {
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,11 +35,11 @@ html {
   margin: 0 50px;
   max-width: 1440px;
 }
-.gridContainer .header .nav .navMenu {
+.header .nav .navMenu {
   display: flex;
   gap: 20px;
 }
-.gridContainer .header .nav .navMenu .navMenuItem {
+.header .nav .navMenu .navMenuItem {
   list-style: none;
   text-transform: uppercase;
   width: -webkit-max-content;
@@ -48,11 +49,11 @@ html {
   letter-spacing: 3px;
   font-weight: 100;
 }
-.gridContainer .header .nav .navMenu .navMenuItem .navMenuLink {
+.header .nav .navMenu .navMenuItem .navMenuLink {
   text-decoration: none;
   position: relative;
 }
-.gridContainer .header .nav .navMenu .navMenuItem .navMenuLink::before {
+.header .nav .navMenu .navMenuItem .navMenuLink::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -63,22 +64,22 @@ html {
   transition: transform 0.5s ease-in-out;
   transform-origin: right;
 }
-.gridContainer .header .nav .navMenu .navMenuItem .navMenuLink:hover::before {
+.header .nav .navMenu .navMenuItem .navMenuLink:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
-.gridContainer .header .nav .navMenu .navMenuItem .navMenuLink:hover {
+.header .nav .navMenu .navMenuItem .navMenuLink:hover {
   color: rgb(255, 183, 0);
   transition: color 0.5s ease-in-out;
   text-shadow: 1px 1px 5px;
   font-weight: 200;
 }
-.gridContainer .header .nav .navMenu .navMenuItem .active {
+.header .nav .navMenu .navMenuItem .active {
   color: rgb(255, 183, 0);
   text-shadow: 1px 1px 5px;
   font-weight: 200;
 }
-.gridContainer .header .nav .menuToggle {
+.header .nav .menuToggle {
   color: #ffffff;
   background: none;
   border: none;
@@ -88,19 +89,20 @@ html {
   display: none;
   cursor: pointer;
 }
-.gridContainer .header .nav .menuToggle .toggle {
+.header .nav .menuToggle .toggle {
   width: 50px;
   height: 50px;
 }
-.gridContainer .main {
+
+.main {
   /* MAIN */
   grid-area: main;
   background: linear-gradient(180deg, #080808, #4a3037);
 }
-.gridContainer .main #section1 {
+.main #section1 {
   /* SECCION INDEX */
 }
-.gridContainer .main #section1 .tituloPrincipal, .gridContainer .main #section1 .containerNoticias h3, .gridContainer .main #section1 h2 {
+.main #section1 .tituloPrincipal, .main #section1 .containerNoticias h3, .main #section1 h2 {
   width: 40%;
   margin: auto;
   font-weight: 400;
@@ -111,30 +113,30 @@ html {
   padding-top: 15px;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #section1 h2 {
+.main #section1 h2 {
   font-size: 1.7rem;
   border-bottom: none;
   padding-top: 5px;
   font-weight: 300;
 }
-.gridContainer .main #section1 .containerVideo {
+.main #section1 .containerVideo {
   display: flex;
   justify-content: center;
 }
-.gridContainer .main #section1 .containerVideo .iframe {
+.main #section1 .containerVideo .iframe {
   width: 1200px;
   height: 680px;
 }
-.gridContainer .main #section1 .containerNoticias {
+.main #section1 .containerNoticias {
   margin: 20px;
 }
-.gridContainer .main #section1 .containerNoticias h3 {
+.main #section1 .containerNoticias h3 {
   font-size: 1.6rem;
   padding-top: 25px;
   letter-spacing: 2px;
   font-weight: 200;
 }
-.gridContainer .main #section1 .containerNoticias p {
+.main #section1 .containerNoticias p {
   margin: auto;
   width: 67%;
   font-weight: 100;
@@ -143,7 +145,7 @@ html {
   line-height: 40px;
   text-align: justify;
 }
-.gridContainer .main #section2 h3 {
+.main #section2 h3 {
   margin: auto;
   width: 40%;
   font-size: 1.6rem;
@@ -153,7 +155,7 @@ html {
   font-weight: 200;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #section2 .boxGaleria {
+.main #section2 .boxGaleria {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -165,7 +167,7 @@ html {
   margin-bottom: 70px;
   margin-top: 50px;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque {
+.main #section2 .boxGaleria .boxBloque {
   position: relative;
   width: 400px;
   height: 500px;
@@ -174,25 +176,25 @@ html {
   overflow: hidden;
   margin-top: 45px;
 }
-.gridContainer .main #section2 .boxGaleria:hover .boxBloque {
+.main #section2 .boxGaleria:hover .boxBloque {
   transform: rotateY(25deg);
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque:hover {
+.main #section2 .boxGaleria .boxBloque:hover {
   transform: rotateY(0deg) scale(1.2);
   z-index: 1;
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque:hover ~ .boxBloque {
+.main #section2 .boxGaleria .boxBloque:hover ~ .boxBloque {
   transform: rotateY(-25deg);
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg {
+.main #section2 .boxGaleria .boxBloque .boxImg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg:before {
+.main #section2 .boxGaleria .boxBloque .boxImg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -205,10 +207,10 @@ html {
   transition: 0.5s;
   mix-blend-mode: multiply;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxImg:before {
+.main #section2 .boxGaleria .boxBloque:hover .boxImg:before {
   opacity: 1;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxImg img {
+.main #section2 .boxGaleria .boxBloque .boxImg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -217,7 +219,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido {
+.main #section2 .boxGaleria .boxBloque .boxContenido {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,7 +231,7 @@ html {
   align-items: flex-end;
   box-sizing: border-box;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido h2 {
+.main #section2 .boxGaleria .boxBloque .boxContenido h2 {
   transition: 0.5s;
   text-align: center;
   text-transform: uppercase;
@@ -239,28 +241,28 @@ html {
   transform: translateY(200px);
   transition-delay: 0.3s;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido h2 {
+.main #section2 .boxGaleria .boxBloque:hover .boxContenido h2 {
   transform: translateY(0px);
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido p {
+.main #section2 .boxGaleria .boxBloque .boxContenido p {
   text-align: center;
   transition: 0.5s;
   font-size: 14px;
   transform: translateY(200px);
   transition-delay: 0.4s;
 }
-.gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
+.main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
   transform: translateY(0px);
 }
-.gridContainer .main #sectionNosotros {
+.main #sectionNosotros {
   /* NOSOTROS */
 }
-.gridContainer .main #sectionNosotros .containerNosotros1 {
+.main #sectionNosotros .containerNosotros1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.gridContainer .main #sectionNosotros .containerNosotros1 h1 {
+.main #sectionNosotros .containerNosotros1 h1 {
   width: 40%;
   padding-top: 15px;
   margin: auto;
@@ -272,7 +274,7 @@ html {
   font-size: 1.8rem;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #sectionNosotros .containerNosotros1 p {
+.main #sectionNosotros .containerNosotros1 p {
   margin: auto;
   width: 80%;
   text-align: justify;
@@ -281,7 +283,7 @@ html {
   line-height: 25px;
   padding-bottom: 25px;
 }
-.gridContainer .main #sectionNosotros .containerNosotros1 h2 {
+.main #sectionNosotros .containerNosotros1 h2 {
   width: 40%;
   padding-top: 25px;
   margin: auto;
@@ -293,20 +295,20 @@ html {
   font-weight: 200;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #sectionNosotros .containerImg {
+.main #sectionNosotros .containerImg {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.gridContainer .main #sectionNosotros .containerImg img {
+.main #sectionNosotros .containerImg img {
   max-width: 80%;
   padding: 20px 0;
 }
-.gridContainer .main #sectionProductos {
+.main #sectionProductos {
   /* PRODUCTOS */
   margin: auto;
 }
-.gridContainer .main #sectionProductos h2 {
+.main #sectionProductos h2 {
   width: 60%;
   padding-top: 15px;
   margin: auto;
@@ -318,25 +320,25 @@ html {
   font-size: 1.3rem;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #sectionProductos .containerProductos {
+.main #sectionProductos .containerProductos {
   display: flex;
   justify-content: space-around;
   width: 90%;
   margin: auto;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard {
+.main #sectionProductos .containerProductos .containerCard {
   width: 30%;
   margin: 0 10px;
   display: flex;
   flex-direction: column;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+.main #sectionProductos .containerProductos .containerCard h3 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.5rem;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
+.main #sectionProductos .containerProductos .containerCard h2 {
   text-align: center;
   font-weight: 200;
   font-size: 1.4rem;
@@ -345,59 +347,63 @@ html {
   margin: 0;
   padding: 0;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .pale {
+.main #sectionProductos .containerProductos .containerCard .pale {
   color: #e7d84a;
   border-bottom: solid 2px #e7d84a;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .stout {
+.main #sectionProductos .containerProductos .containerCard .stout {
   color: #4a3037;
   border-bottom: solid 2px #4a3037;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .porter {
+.main #sectionProductos .containerProductos .containerCard .porter {
   color: #2f3732;
   border-bottom: solid 2px #2f3732;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo {
+.main #sectionProductos .containerProductos .containerCard .containerInfo {
   width: 100%;
   height: 50%;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo p {
+.main #sectionProductos .containerProductos .containerCard .containerInfo p {
   text-align: justify;
   line-height: 25px;
   font-size: 1rem;
   margin: 5px 0;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
+.main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
   list-style: none;
   font-size: 1.1rem;
 }
-.gridContainer .main #sectionProductos .containerProductos .containerCard img {
+.main #sectionProductos .containerProductos .containerCard img {
   width: 90%;
   margin: 25px auto;
 }
-.gridContainer .main #sectionLugares h3 {
-  width: 80%;
-  margin: 25px auto;
+.main #sectionLugares {
+  /* DONDE COMPRAR */
+}
+.main #sectionLugares h3 {
+  width: 60%;
+  padding-top: 15px;
+  margin: auto;
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 1px solid rgb(255, 183, 0);
 }
-.gridContainer .main #sectionLugares .containerLogos {
+.main #sectionLugares .containerLogos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
   margin: 25px 25px;
 }
-.gridContainer .main #sectionLugares .containerLogos li {
+.main #sectionLugares .containerLogos li {
   flex-basis: 400px;
   list-style: none;
   position: relative;
   cursor: pointer;
 }
-.gridContainer .main #sectionLugares .containerLogos li img {
+.main #sectionLugares .containerLogos li img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -405,7 +411,7 @@ html {
   vertical-align: middle;
   border-radius: 5px;
 }
-.gridContainer .main #sectionLugares .containerLogos li .overlay {
+.main #sectionLugares .containerLogos li .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -424,17 +430,18 @@ html {
   font-weight: 100;
   text-align: center;
 }
-.gridContainer .main #sectionLugares .containerLogos li .overlay a {
+.main #sectionLugares .containerLogos li .overlay a {
   text-decoration: none;
 }
-.gridContainer .main #sectionLugares .containerLogos li:hover .overlay {
+.main #sectionLugares .containerLogos li:hover .overlay {
   transform: scale(1);
 }
-.gridContainer .main #sectionLugares .containerLogos::after {
+.main #sectionLugares .containerLogos::after {
   content: "";
   flex-basis: 400px;
 }
-.gridContainer .footer {
+
+.footer {
   /* FOOTER */
   grid-area: footer;
   width: 100%;
@@ -445,13 +452,13 @@ html {
   border-top: solid 3px rgb(255, 183, 0);
   text-align: center;
 }
-.gridContainer .footer .containerFooter {
+.footer .containerFooter {
   display: flex;
   justify-content: space-around;
   width: 90%;
   margin: auto;
 }
-.gridContainer .footer .containerFooter .containerSocial .btn {
+.footer .containerFooter .containerSocial .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,26 +469,26 @@ html {
   overflow: hidden;
   position: relative;
 }
-.gridContainer .footer .containerFooter .containerSocial .btn ion-icon {
+.footer .containerFooter .containerSocial .btn ion-icon {
   font-size: 2rem;
 }
-.gridContainer .footer .containerFooter .containerSocial .btn .facebook {
+.footer .containerFooter .containerSocial .btn .facebook {
   color: #4267b2;
 }
-.gridContainer .footer .containerFooter .containerSocial .btn .instagram {
+.footer .containerFooter .containerSocial .btn .instagram {
   color: #833ab4;
 }
-.gridContainer .footer .containerFooter .containerSocial .btn:hover ion-icon {
+.footer .containerFooter .containerSocial .btn:hover ion-icon {
   color: #ffffff;
   transform: scale(1.3);
 }
-.gridContainer .footer .containerFooter .containerSocial .btn:hover::before {
+.footer .containerFooter .containerSocial .btn:hover::before {
   -webkit-animation: onHover 0.7s 1;
           animation: onHover 0.7s 1;
   left: -10%;
   top: -10%;
 }
-.gridContainer .footer .containerFooter .containerSocial .btnFacebook::before {
+.footer .containerFooter .containerSocial .btnFacebook::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -491,7 +498,7 @@ html {
   left: -110%;
   top: 90%;
 }
-.gridContainer .footer .containerFooter .containerSocial .btnInstagram::before {
+.footer .containerFooter .containerSocial .btnInstagram::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -501,7 +508,7 @@ html {
   left: -110%;
   top: 90%;
 }
-.gridContainer .footer p {
+.footer p {
   padding-top: 10px;
   font-size: 0.7rem;
 }
@@ -542,10 +549,10 @@ html {
     top: 0;
     left: 0;
   }
-  .gridContainer .header .nav {
+  .header .nav {
     margin: 0 25px;
   }
-  .gridContainer .header .nav .navMenu {
+  .header .nav .navMenu {
     flex-direction: column;
     align-items: center;
     background: #4a3037;
@@ -559,122 +566,122 @@ html {
     transition: left 0.5s ease-in-out;
     z-index: 1;
   }
-  .gridContainer .header .nav .navMenu .navMenuItem {
+  .header .nav .navMenu .navMenuItem {
     margin: 20px 0;
     line-height: 30px;
   }
-  .gridContainer .header .nav .menuToggle {
+  .header .nav .menuToggle {
     display: block;
   }
-  .gridContainer .header .nav .navMenu_visible {
+  .header .nav .navMenu_visible {
     left: 0;
   }
-  .gridContainer .main #section1 .tituloPrincipal, .gridContainer .main #section1 h2, .gridContainer .main #section1 .containerNoticias h3 {
+  .main #section1 .tituloPrincipal, .main #section1 h2, .main #section1 .containerNoticias h3 {
     width: 90%;
     font-size: 1.5rem;
   }
-  .gridContainer .main #section1 h2 {
+  .main #section1 h2 {
     font-size: 1.4rem;
   }
-  .gridContainer .main #section1 .containerVideo .iframe {
+  .main #section1 .containerVideo .iframe {
     width: 600px;
     height: 300px;
   }
-  .gridContainer .main #section1 .containerNoticias h3 {
+  .main #section1 .containerNoticias h3 {
     font-size: 1.2rem;
   }
-  .gridContainer .main #section1 .containerNoticias p {
+  .main #section1 .containerNoticias p {
     font-size: 1rem;
     line-height: 20px;
     width: 90%;
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque {
+  .main #section2 .boxGaleria .boxBloque {
     width: 220px;
     height: 275px;
     margin-top: 0px;
   }
-  .gridContainer .main #section2 h3 {
+  .main #section2 h3 {
     width: 80%;
     font-size: 1rem;
   }
-  .gridContainer .main #sectionNosotros .containerNosotros1 h1 {
+  .main #sectionNosotros .containerNosotros1 h1 {
     width: 90%;
     font-size: 1.5rem;
   }
-  .gridContainer .main #sectionNosotros .containerNosotros1 p {
+  .main #sectionNosotros .containerNosotros1 p {
     font-size: 1rem;
   }
-  .gridContainer .main #sectionNosotros .containerNosotros1 h2 {
+  .main #sectionNosotros .containerNosotros1 h2 {
     width: 90%;
     font-size: 1.4rem;
   }
-  .gridContainer .main #sectionProductos h2 {
+  .main #sectionProductos h2 {
     width: 90%;
   }
-  .gridContainer .main #sectionProductos .containerProductos {
+  .main #sectionProductos .containerProductos {
     flex-direction: column;
     align-items: center;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard {
+  .main #sectionProductos .containerProductos .containerCard {
     width: 100%;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+  .main #sectionProductos .containerProductos .containerCard h3 {
     font-size: 1.5rem;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
+  .main #sectionProductos .containerProductos .containerCard h2 {
     font-size: 1.4rem;
   }
 }
 @media (max-width: 576px) {
-  .gridContainer .main #section1 .containerVideo .iframe {
+  .main #section1 .containerVideo .iframe {
     width: 300px;
     height: 180px;
   }
-  .gridContainer .main #section2 .boxGaleria {
+  .main #section2 .boxGaleria {
     flex-wrap: wrap;
     width: 60%;
     margin: auto;
     margin-bottom: 60px;
     margin-top: 10px;
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque {
+  .main #section2 .boxGaleria .boxBloque {
     margin-top: 45px;
   }
-  .gridContainer .main #section2 .boxGaleria:hover .boxBloque {
+  .main #section2 .boxGaleria:hover .boxBloque {
     transform: rotateX(-25deg);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque:hover {
+  .main #section2 .boxGaleria .boxBloque:hover {
     transform: rotateX(0deg) scale(1.2);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque:hover ~ .boxBloque {
+  .main #section2 .boxGaleria .boxBloque:hover ~ .boxBloque {
     transform: rotateX(25deg);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido h2 {
+  .main #section2 .boxGaleria .boxBloque .boxContenido h2 {
     transform: translateY(200px);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido h2 {
+  .main #section2 .boxGaleria .boxBloque:hover .boxContenido h2 {
     transform: translateY(0px);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque .boxContenido p {
+  .main #section2 .boxGaleria .boxBloque .boxContenido p {
     transform: translateY(200px);
   }
-  .gridContainer .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
+  .main #section2 .boxGaleria .boxBloque:hover .boxContenido p {
     transform: translateY(0px);
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard h3 {
+  .main #sectionProductos .containerProductos .containerCard h3 {
     font-size: 1.2rem;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard h2 {
+  .main #sectionProductos .containerProductos .containerCard h2 {
     font-size: 1.1rem;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo p {
+  .main #sectionProductos .containerProductos .containerCard .containerInfo p {
     font-size: 0.9rem;
     margin: 0;
   }
-  .gridContainer .main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
+  .main #sectionProductos .containerProductos .containerCard .containerInfo ul li {
     font-size: 0.9em;
   }
-  .gridContainer .footer p {
+  .footer p {
     font-size: 0.8rem;
   }
 }/*# sourceMappingURL=main.css.map */
